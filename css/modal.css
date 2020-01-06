@@ -1,0 +1,91 @@
+:root {
+    --modal-duration: 1s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.modal-content {
+    background: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 13% auto;
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+    padding: 1.9rem;
+    box-shadow: 0 5px 8px 0 rgb(0, 0, 0.2), 0 7px 20px 0 rgb(0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-content h1 {
+    margin-bottom: 0.4rem;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media(max-width: 700px) {
+.modal-content {
+    text-align: center;
+    font-size: 0.4rem;
+    margin: 35% auto;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+}
+
+.modal-content h1 {
+    margin-bottom: 0.3rem;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+}
+
+@media(max-width: 300px) {
+    .modal-content {
+        text-align: center;
+        font-size: 0.4rem;
+        margin: 25% auto;
+        width: 150px;
+        height: 150px;
+        padding: 0.5rem;
+    }
+    
+    .modal-content h1 {
+        margin-bottom: 0.3rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+}
